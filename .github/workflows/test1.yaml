@@ -23,3 +23,14 @@ jobs:
 
       - name: Test Strapi application
         run: npm test 
+      - name: Package application
+        run: |
+          mkdir -p dist
+          # Example: Create a zip file
+          zip -r dist/app.zip .
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-package
+          path: dist/app.zip 
