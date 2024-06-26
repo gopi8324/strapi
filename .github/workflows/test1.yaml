@@ -3,7 +3,7 @@ name: CI/CD Pipeline for Strapi
 on:
   push:
     branches:
-      - develop
+      - gopi
 
 jobs:
   build:
@@ -23,14 +23,7 @@ jobs:
 
       - name: Test Strapi application
         run: npm test 
-      - name: Package application
+      - name: run strapi application
         run: |
-          mkdir -p dist
-          # Example: Create a tar file
-          zip -r dist/app.zip .
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: app-package
-          path: dist/app.zip 
+          cd github.com &&
+          npm run start 
