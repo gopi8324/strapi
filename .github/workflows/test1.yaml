@@ -26,11 +26,11 @@ jobs:
       - name: Package application
         run: |
           mkdir -p dist
-          # Example: Create a zip file
-          zip -r dist/app.zip .
+          # Example: Create a tar file
+          tar -zcvf dist/app.tar .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: app-package
-          path: dist/app.zip 
+          path: dist/app.tar 
