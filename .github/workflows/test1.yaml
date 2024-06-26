@@ -3,7 +3,7 @@ name: CI/CD Pipeline for Strapi
 on:
   push:
     branches:
-      - main  # Adjust branch as needed
+      - develop
 
 jobs:
   build:
