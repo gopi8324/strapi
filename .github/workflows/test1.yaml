@@ -20,6 +20,8 @@ jobs:
 
       - name: Build Strapi application
         run: npm run 
+      - name: for pretty
+        run: yarn run
 
       - name: Test Strapi application
         run: npm test 
